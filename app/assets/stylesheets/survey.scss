@@ -1,0 +1,392 @@
+// Place all the styles related to the Survey controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+	line-height: 26px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Crete Round', 'Helvetica Neue', 'sans serif';
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+.cover_page {
+	position: fixed;
+	background-color: #c38a55;
+	background-image: image_url("background.jpeg");
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	/*display: none;*/
+}
+
+.cover_photo {
+	position: relative;
+	top: 5%;
+	width: 70%;
+	height: 50%;
+	margin: 0 auto;
+	background-image: image_url("cover.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.survey_title {
+	position: relative;
+	top: 0%;
+	margin: 0 auto;
+	width: 200px;
+	color: rgb(242, 255, 122);
+	font-size: 24px;
+}
+
+.description {
+	position: relative;
+	top: 5%;
+}
+
+.description > p {
+	color: rgb(242, 255, 122);
+	font-size: 20px;
+	text-align: center;
+}
+
+.start-wrap {
+	position: relative;
+	cursor: pointer;
+	margin: 0 auto;
+	top: 15px;
+	width: 150px;
+	height: auto;
+	font-size: 28px;
+	color: rgb(240, 209, 180);
+	border: 1px solid #B07742;
+	background-color: rgb(158, 93, 32);
+	border-bottom-color: rgb(99, 58, 20);
+	border-radius: 3px;
+	padding: 15px 5px;
+	z-index: 5;
+}
+
+.startSurvey {
+	text-align: center;
+	z-index: 0;
+}
+
+.background {
+	position: fixed;
+	background-image: image_url("background.jpeg");
+	background-color: #c38a55;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	top: 0;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: inherit;
+	/*background: red;*/
+	min-width: 600px;
+	z-index: 3;
+	display: none;
+}
+
+.questions {
+	width: 80%;
+	height: 100%;
+	margin-left: 13%;
+	margin-right: 7%;
+}
+
+.columns {
+	margin-top: 20%;
+}
+
+.columns:last-child {
+	height: 400px;
+}
+
+.letter {
+	color: white;
+	width:100px;
+}
+.arrow {
+	display: inline;
+	position: relative;
+	left: 10px;
+}
+.arrow-right {
+	margin-top: -18px;
+	position: relative;
+	width: 0.4em;
+    height: 0.4em;
+    color: white;
+    border-right: 0.2em solid black;
+    border-right-color: white;
+    border-top: 0.2em solid black;
+    border-top-color: white;
+    transform: rotate(45deg);
+}
+
+.question {
+	word-break: break-word;
+	width: 70%;
+	position: relative;
+	left: 35px;
+	top: -18px;
+	color: rgb(242, 255, 122);
+	font-size: 20px;
+}
+
+.choice {
+	width: 160px;
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 30px;
+	margin-left: 45px;
+	padding: 10px 0;
+}
+
+.chosen {
+	position: absolute;	
+	text-align: center;
+	vertical-align: center;
+
+}
+.chosen span {
+	font-size: 15px;
+	color: #FFF;
+	opacity: 0.4;
+
+}
+
+.chosen-wrapper {
+	position: absolute;
+	border: 1px solid;
+	width: 20px;
+	height: 20px;
+	left: -6px;
+	top: 4px;
+	border-radius: 5px;
+	border-color: #000;
+	opacity: 0.2;
+}
+
+.answer {
+	position: relative;
+	display: inline;
+	left:	24px;
+	top: -2px;
+	font-size: 20px;
+	color: white;
+}
+
+.aux {
+	position: absolute;
+	width: 200px;
+	height: 35px;
+	margin-left: -15px;
+	margin-top: -5px; 
+
+	background-color: #555;
+	border: 1px solid;
+	border-top-color: #FFF;
+	border-radius: 2px;
+	z-index: 2;
+	opacity: 0.2;
+}
+
+.aux:hover {
+	opacity: 0.5;
+	color: #FFF;
+
+}
+
+.pickup {
+	background-color: #000;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 90px;
+	z-index: 4;
+}
+
+.submit-wrap {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 90px;
+	background-color: #c38a55;
+	border-top: 1px solid #B07742;
+	z-index: 4;
+	display: none;
+}
+
+.submit-wrap > .progress {
+	display: inline-block;
+	position: relative;
+	top: 15px;
+	left: 50px;
+
+}
+
+.progress .label {
+	color: white;
+	opacity: 0.8;
+	font-size: 14px;
+}
+
+.bar {
+	width: 225px;
+	height: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 2px;
+
+}
+.bar > .wrapper {
+	position: absolute;
+	background-color: white;
+	width: inherit;
+	height: inherit;
+	opacity: 0.3;
+	border-radius: 2px;
+}
+
+.bar > .progress {
+	position: absolute;
+	width: 0%;
+	height: 5px;
+	background-color: white;
+	opacity: 1;
+	
+
+}
+
+.submit	{
+	position: relative;
+	display: inline-block;
+	float: right;
+	top: 20px;
+	right: 40px;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	font-size: 24px;
+	color: rgb(240, 209, 180);
+	border: 1px solid #B07742;
+	background-color: rgb(158, 93, 32);
+	border-bottom-color: rgb(99, 58, 20);
+	border-radius: 3px;
+	padding: 5px;
+	z-index: 2;
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.submit:hover {
+	background-color: rgb(200, 118, 41);
+	border: 1px solid rgb(99, 58, 20);
+}
+
+.pre-select {
+	background-color: rgb(200, 118, 41);
+}
+
+.result-A {
+	position: fixed;
+	background-color: #c38a55;
+	background-image: image_url("background.jpeg");
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	display: none;
+	overflow: hidden;
+}
+
+.result-graph div {
+	display: none;
+}
+
+.result-graph img{
+	width: 100%;
+	height: auto;
+}
+
+.result-graph div.active {
+	display: block;
+}
+
+.inform {
+	position: absolute;
+	left: 50%;
+	margin-left: -135px;
+}
+
+.inform div{
+	float: left;
+}
+
+.line {
+	width: 52px;
+	height: 52px;
+	margin: -6px;
+}
+
+.mail {
+	margin-top: 2px;
+	width: 38px;
+	height: 38px;
+}
+.FB {
+	margin: -2px;
+	width: 44px;
+	height: 44px;
+}
+
+.contact {
+	position: relative;
+	left: 50%;
+	margin-left: -66px;
+}
+
+.copyright {
+	text-align: center;
+	margin: 15px;
+	width: 15em;
+	clear: left;
+	/*color: rgb(242, 255, 122);*/
+}
+
+.inform img {
+	margin: 10px 5px;
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
