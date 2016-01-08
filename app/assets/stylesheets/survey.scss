@@ -31,8 +31,9 @@ ul, li {
 .cover_photo {
 	position: relative;
 	top: 5%;
+	left: 50%;
 	width: 70%;
-	height: 50%;
+	height: 280;
 	margin: 0 auto;
 	background-image: image_url("cover.jpg");
 	background-repeat: no-repeat;
@@ -41,7 +42,7 @@ ul, li {
 
 .survey_title {
 	position: relative;
-	top: 0%;
+	top: 5%;
 	margin: 0 auto;
 	width: 200px;
 	color: rgb(242, 255, 122);
@@ -378,12 +379,9 @@ ul, li {
 }
 
 
-
-
-
-
-
-
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+	
+}
 
 
 
