@@ -31,18 +31,21 @@ ul, li {
 .cover_photo {
 	position: relative;
 	top: 5%;
-	left: 50%;
-	width: 70%;
-	height: 280;
+	width: 100%;
+	height: auto;
 	margin: 0 auto;
-	background-image: image_url("cover.jpg");
 	background-repeat: no-repeat;
 	background-size: contain;
+	text-align: center;
+}
+
+.cover_photo img {
+	width: 80%;
 }
 
 .survey_title {
 	position: relative;
-	top: 5%;
+	top: 9%;
 	margin: 0 auto;
 	width: 200px;
 	color: rgb(242, 255, 122);
@@ -51,7 +54,7 @@ ul, li {
 
 .description {
 	position: relative;
-	top: 5%;
+	top: 15%;
 }
 
 .description > p {
@@ -379,8 +382,10 @@ ul, li {
 }
 
 
-@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
-	
+@media screen and (device-width: 320px) and (-webkit-device-pixel-ratio: 2){
+	.description > p {
+		font-size: 15px;
+	}
 }
 
 
