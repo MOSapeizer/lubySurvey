@@ -2,22 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-* {
-	line-height: 26px;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-}
-
-html, body {
-	height: 100%;
-	font-family: 'Crete Round', 'Helvetica Neue', 'sans serif';
-}
-
-ul, li {
-	list-style-type: none;
-}
-
 .cover_page {
 	position: fixed;
 	background-color: #c38a55;
@@ -40,6 +24,7 @@ ul, li {
 }
 
 .cover_photo img {
+	max-width: 768px;
 	width: 80%;
 }
 
