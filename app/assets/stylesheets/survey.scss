@@ -401,11 +401,8 @@
 	.cover_page {
 		min-height: 800px;
 	}
-
-	span {
-		font-size: 16px;
-	}
-	.description > p {
+	
+	span, .description > p, .answer,  {
 		font-size: 16px;
 	}
 	.footer {
