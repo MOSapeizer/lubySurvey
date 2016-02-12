@@ -6,6 +6,7 @@
 	position: fixed;
 	background-color: #c38a55;
 	background-image: image_url("background.jpeg");
+	background-size: cover;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
@@ -43,7 +44,8 @@
 }
 
 .description > p {
-	width: 80%;
+	margin: auto;
+	margin-top: 0.35em;
 	color: rgb(242, 255, 122);
 	font-size: 20px;
 	text-align: center;
@@ -76,6 +78,7 @@
 	position: fixed;
 	background-image: image_url("background.jpeg");
 	background-color: #c38a55;
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 	z-index: 1;
@@ -87,7 +90,7 @@
 	width: 100%;
 	height: inherit;
 	/*background: red;*/
-	min-width: 600px;
+	// min-width: 600px;
 	z-index: 3;
 	display: none;
 }
@@ -131,7 +134,7 @@
 
 .question {
 	word-break: break-word;
-	width: 70%;
+	width: 80%;
 	position: relative;
 	left: 35px;
 	top: -18px;
@@ -376,6 +379,48 @@
 
 	.description > p {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 360px){
+
+	span {
+		font-size: 16px;
+	}
+	.description > p {
+		
+		font-size: 16px;
+	}
+	.footer {
+		height: 25%;
+	}
+}
+
+@media screen and (max-width: 768px){
+
+	.cover_page {
+		min-height: 800px;
+	}
+
+	span {
+		font-size: 16px;
+	}
+	.description > p {
+		font-size: 16px;
+	}
+	.footer {
+		height: 25%;
+	}
+
+	.submit {
+		right: 1.5em;
+		width: 2.5em;
+	}
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+	.description {
+		top: 10%;
 	}
 }
 
