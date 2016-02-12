@@ -43,9 +43,11 @@
 }
 
 .description > p {
+	width: 80%;
 	color: rgb(242, 255, 122);
 	font-size: 20px;
 	text-align: center;
+	word-break: break-all;
 }
 
 .start-wrap {
@@ -367,9 +369,13 @@
 }
 
 
-@media screen and (device-width: 320px) and (-webkit-device-pixel-ratio: 2){
+@media screen and (max-width: 320px){
+	.survey_title {
+		top: 20%;
+	}
+
 	.description > p {
-		font-size: 15px;
+		display: none;
 	}
 }
 
