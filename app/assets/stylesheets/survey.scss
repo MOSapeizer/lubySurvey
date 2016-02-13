@@ -25,7 +25,8 @@
 }
 
 .cover_photo img {
-	max-width: 768px;
+	max-width: 600px;
+	// max-height: 30%;
 	width: 80%;
 }
 
@@ -40,10 +41,11 @@
 
 .description {
 	position: relative;
-	top: 15%;
+	top: 10%;
 }
 
 .description > p {
+	height: 45%;
 	margin: auto;
 	margin-top: 0.35em;
 	color: rgb(242, 255, 122);
@@ -211,8 +213,8 @@
 }
 
 .footer {
-	position: fixed;
-	bottom: 0;
+	position: relative;
+	top: 15%;
 	width: 100%;
 	height: 90px;
 	z-index: 4;
@@ -401,7 +403,7 @@
 	.cover_page {
 		min-height: 800px;
 	}
-	
+
 	span, .description > p, .answer,  {
 		font-size: 16px;
 	}
@@ -416,8 +418,35 @@
 }
 
 @media screen and (min-aspect-ratio: 4/3) {
+	.survey_title {
+		top: 5%;
+	}
 	.description {
-		top: 10%;
+		top: 5%;
+	}
+	.footer {
+		top: 5%;
+	}
+}
+
+@media screen and (aspect-ratio: 8/5), screen and  (aspect-ratio: 16/9) {
+	.survey_title {
+		top: 5%;
+	}
+	.description {
+		top: 8%;
+	}
+	.footer {
+		margin-top: 5%;
+	}
+}
+
+@media screen and (max-width: 640px) and (max-height: 360px) {
+	.cover_photo {
+		width: 60%;
+	}
+	.description {
+		display: none;
 	}
 }
 
